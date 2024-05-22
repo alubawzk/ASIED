@@ -1,4 +1,4 @@
-function [ candidates_ ] = Ellipse_Cluster_WithoutShift( candidates, points, normals, candidates_cover, Tmin, sigma_L, sigma_w, Mahala_tolerance  )
+function [ candidates_ ] = Ellipse_Cluster_WithoutShift( candidates, points, normals, candidates_cover, Tmin, sigma_L, sigma_w, Homo_tolerance  )
 %UNTITLED 此处显示有关此函数的摘要
 %   此处显示详细说明
     % [y,x]=find(edge);
@@ -66,7 +66,7 @@ function [ candidates_ ] = Ellipse_Cluster_WithoutShift( candidates, points, nor
                 continue;
             end
 %             flag = Judge_Ellipse(candidates(i,:), inliers_matrix{j});
-            flag = Judge_EllipseInstance(candidates(i,:), candidates(j,:), Mahala_tolerance);
+            flag = Judge_EllipseInstance(candidates(i,:), candidates(j,:), Homo_tolerance);
             if ~flag
 %                 fprintf('Maha:%d,%d\n',i,j); 
                 continue;

@@ -1,4 +1,4 @@
-function [final_candiates] = Get_FinalCandidates_MahalaDistMean(candidates, elps, points,normals,Mahala_tolerance,Tmin)
+function [final_candiates] = Get_FinalCandidates_MahalaDistMean(candidates, elps, points,normals,Homo_tolerance,Tmin)
 %判断同源集合中的最大可靠elp
 %   输入：
 %   elps：候选椭圆
@@ -17,7 +17,7 @@ for i=1:homosets_num
     % get final ellpise candidate
 %     final_candiates(i,1) = GetMostReliable(candidates, elps_set, sigma_L, sigma_w, Ellipse_error_tolerance, candidates_cover);
 %     final_candiates(i,1) = elps_set(1); % used
-    elp(i,:) = GetFinalCandidate(elps_set, candidates, points, normals, Mahala_tolerance, Tmin);
+    elp(i,:) = GetFinalCandidate(elps_set, candidates, points, normals, Homo_tolerance, Tmin);
 end
 final_candiates = elp;
 end

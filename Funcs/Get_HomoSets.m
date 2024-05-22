@@ -1,4 +1,4 @@
-function [HomoSets] = Get_HomoSets(ellipses, Mahala_Dist_Tolerance, coeff)
+function [HomoSets] = Get_HomoSets(ellipses, Homo_Dist_Tolerance, coeff)
 %找到候选椭圆中的同源子集
 %   输入：
 %   ellipse(i,5)：候选椭圆集合
@@ -42,7 +42,7 @@ for i=1:elps_num
         end
         
         % 判断ith与jth椭圆的距离，如果距离合格将jth椭圆加入Homolabels
-        if Judge_TwoEllipses_Dist(ellipses(i,:), ellipses(j,:), Mahala_Dist_Tolerance, coeff(i,:), coeff(j,:))
+        if Judge_TwoEllipses_Dist(ellipses(i,:), ellipses(j,:), Homo_Dist_Tolerance, coeff(i,:), coeff(j,:))
              Homo_labels(j) = true;
         end
     end

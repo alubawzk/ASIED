@@ -1,4 +1,4 @@
-function flag = Judge_EllipseInstance(ellipse_i, ellipse_j, Mahala_tolerance)
+function flag = Judge_EllipseInstance(ellipse_i, ellipse_j, Homo_tolerance)
     flag = false;
     cx = ellipse_j(1);
     cy = ellipse_j(2);
@@ -24,7 +24,7 @@ function flag = Judge_EllipseInstance(ellipse_i, ellipse_j, Mahala_tolerance)
     theta=ellipse_i(5);
     Maha_Dist = MahalaDist(p_j',c,axis,theta,1);
     H = sum(Maha_Dist)/N;
-    if H <= Mahala_tolerance
+    if H <= Homo_tolerance
         flag = true;
     end
     
