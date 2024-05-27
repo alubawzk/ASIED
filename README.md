@@ -14,7 +14,7 @@
 - We will release the details once the paper is published.
   
 ## 4. TODO
-- Preparing the official codes.
+- Preparing the official code.
 
 Citation
 --------
