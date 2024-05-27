@@ -15,3 +15,19 @@
   
 ## 4. TODO
 - Preparing the official codes.
+
+Citation
+--------
+If you find this code useful, please consider citing:
+
+```text
+@article{wang2024anisotropic,
+  title={Anisotropic Scale-Invariant Ellipse Detection},
+  author={Wang, Zikai and Zhong, Baojiang and Ma, Kai-Kuang},
+  journal={IEEE Transactions on Image Processing},
+  year={2024},
+  volume={33},
+  pages={3161-3173},
+  publisher={IEEE}
+}
+```
